@@ -13,6 +13,8 @@ function calculateResult(num1, num2, operator){
             return num1 * num2
         case 'div':
             return num1 / num2
+        case 'modulo':
+            return num1 % num2
     }
     return 0
 }
