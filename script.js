@@ -1,8 +1,8 @@
-console.log('runs')
-
-
+//1. Variablen
 const box = document.querySelector('.calc')
 
+
+//2. Funktionen
 function calculateResult(num1, num2, operator){
     switch (operator) {
         case 'minus':
@@ -14,7 +14,8 @@ function calculateResult(num1, num2, operator){
         case 'div':
             return num1 / num2
         case 'modulo':
-            return num1 % num2
+            let result =  num1 % num2
+            return  result !== result ? 0 : result
     }
     return 0
 }
@@ -40,5 +41,5 @@ function boxEvent(event){
     inputs[2].value = result
 }
 
-
+//3. Event Listener 
 box.addEventListener('keyup', boxEvent)
